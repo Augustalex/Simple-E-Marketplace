@@ -1,0 +1,35 @@
+﻿@using Labb1.Models
+@model Cart
+@{
+
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    
+}
+
+
+<center>
+    <h1>
+        CartId @Model.cartId
+    </h1>
+    <h2>
+        User @(Model.owner.FirstName + " " + Model.owner.LastName)
+    </h2>
+</center>
+
+@foreach (var pickedItem in Model.items)
+{
+    <div>
+        <h1>
+            @pickedItem.Item.name
+        </h1>
+        <h2>
+            @pickedItem.Item.description
+        </h2>
+        <h3>
+            Quantity: @pickedItem.Quantity
+        </h3>
+        <h4>
+            Cost per item: @pickedItem.Item.cost
+        </h4>
+    </div>
+}

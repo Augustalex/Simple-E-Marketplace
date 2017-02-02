@@ -1,0 +1,37 @@
+﻿@using System.Collections
+@using Labb1.Models
+@{
+    ViewBag.Title = "Shop";
+
+    ArrayList items = new System.Collections.ArrayList();
+
+    items.Add(new ShopItem("August", "Cheap mf"));
+    items.Add(new ShopItem("Elvir", "A little bitch"));
+    items.Add(new ShopItem("John"));
+    items.Add(new ShopItem("Bosco"));
+    items.Add(new ShopItem("Simon"));
+    items.Add(new ShopItem("Björn"));
+    items.Add(new ShopItem("Nick"));
+    items.Add(new ShopItem("Carlos"));
+    items.Add(new ShopItem("Markus"));
+    items.Add(new ShopItem("Robin"));
+    items.Add(new ShopItem("Johan 1"));
+    items.Add(new ShopItem("Johan 2"));
+    items.Add(new ShopItem("Patrick"));
+    items.Add(new ShopItem("Victor"));
+    items.Add(new ShopItem("Kristoffer"));
+    items.Add(new ShopItem("Alex"));
+    items.Add(new ShopItem("Felix"));
+    items.Add(new ShopItem("Sebastian"));
+    items.Add(new ShopItem("Andreas"));
+    items.Add(new ShopItem("Jacob"));
+
+}
+
+
+@foreach (var item in items)
+{
+    <div id="shoppingList">
+        @Html.Partial("_ShopItem", item)
+    </div>
+}

@@ -1,0 +1,68 @@
+﻿body {
+    padding-top: 50px;
+    padding-bottom: 20px;
+}
+
+/* Set padding to keep content from hitting the edges */
+.body-content {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+/* Override the default bootstrap behavior where horizontal description lists 
+   will truncate terms that are too long to fit in the left column 
+*/
+.dl-horizontal dt {
+    white-space: normal;
+}
+
+/* Set width on the form input elements since they're 100% wide by default */
+input,
+select,
+textarea {
+    max-width: 280px;
+}
+
+.shopItem {
+    text-align: center;
+    float: left;
+    margin: 1em;
+    width: 25em;
+    height: 150px;
+    background-color: #EEE;
+}
+
+.shopItem > img {
+    width: 25%;
+    float: left;
+    margin: 2%;
+}
+
+.shopItem > h1 {
+    font-family: "Myriad Pro";
+    font-size: 3em;
+    font-weight: bold;
+}
+
+.shopItem > p {
+    
+}
+
+/* Nav Bar */
+
+.navbar {
+    font-size: 1.3em;
+}
+
+#navbar_right {
+    float: right;
+}
+
+#navbar_right > * { /* star selector is slow, try to circumvent using this */
+    float: left;
+}
+
+#cartImage {
+    height: 100px;
+    margin: 1% 2%;
+}

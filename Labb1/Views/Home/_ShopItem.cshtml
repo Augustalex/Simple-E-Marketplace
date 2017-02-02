@@ -1,0 +1,11 @@
+﻿@model Labb1.Models.ShopItem
+
+<div class="shopItem">
+    <img src="@Model.image" />
+    <h1>
+        @String.Format("{0}", Model.name)
+    </h1>
+    <p>
+        @String.Format("{0}", Model.description)
+    </p>
+</div>
