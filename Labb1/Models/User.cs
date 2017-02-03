@@ -48,7 +48,17 @@ namespace Labb1.Models
 
         public User Build()
         {
-            if (done)
+            if (
+                user.FirstName != null &&
+                user.LastName != null &&
+                user.Age > 0 &&
+                user.BillingAddress != null &&
+                user.City != null &&
+                user.Country != null &&
+                user.Title != null &&
+                user.Email != null &&
+                user.Id != 0
+                )
             {
                 return user;
             }
