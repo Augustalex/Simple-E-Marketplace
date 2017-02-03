@@ -32,8 +32,9 @@ namespace Labb1.Controllers
         public ActionResult Shop()
         {
             ViewBag.Message = "Your shopping page.";
-
-            return View();
+            _ItemsController itemsController = new _ItemsController();
+            List<Item> items = itemsController.FetchAllItems();
+            return View(items);
         }
 
         public ActionResult Cart()

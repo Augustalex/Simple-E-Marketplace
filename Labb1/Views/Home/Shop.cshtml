@@ -1,4 +1,5 @@
-﻿@using System.Collections
+﻿@model IEnumerable<Item>
+@using System.Collections
 @using Labb1.Models
 @{
     ViewBag.Title = "Shop";
@@ -30,9 +31,9 @@
 
 
 <div id="shoppingList">
-    @foreach (var item in items){
+    @foreach (var item in Model){
         <div class="shopItem">
-            <img src="@Html.DisplayFor(modelItem => item.image)"/>
+            <img src="@Html.DisplayFor(modelItem => item.name)"/>
             <h1>
                 @Html.DisplayFor(modelItem => item.name)
             </h1>

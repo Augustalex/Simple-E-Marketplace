@@ -9,16 +9,15 @@ namespace Labb1.Controllers
 {
     public class _ItemsController
     {
-
         private ItemContext _itemContext = new ItemContext();
 
         public List<PickedItem> GetItemsFromCartItems(List<CartItem> cartItems)
         {
-            if(!cartItems.Any())
+            if (!cartItems.Any())
                 throw new Exception("No items in cart");
 
             List<PickedItem> pickedItems = new List<PickedItem>();
-            foreach(var item in cartItems)
+            foreach (var item in cartItems)
             {
                 pickedItems.Add(
                     new PickedItem(
@@ -29,6 +28,11 @@ namespace Labb1.Controllers
             }
 
             return pickedItems;
+        }
+
+        public List<Item> FetchAllItems()
+        {
+            return _itemContext.Items.ToList();
         }
     }
 }
