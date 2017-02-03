@@ -51,13 +51,11 @@ namespace Labb1.Models
             if (
                 user.FirstName != null &&
                 user.LastName != null &&
-                user.Age > 0 &&
                 user.BillingAddress != null &&
                 user.City != null &&
                 user.Country != null &&
                 user.Title != null &&
-                user.Email != null &&
-                user.Id != 0
+                user.Email != null
                 )
             {
                 return user;
