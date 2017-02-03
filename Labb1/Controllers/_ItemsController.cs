@@ -14,7 +14,7 @@ namespace Labb1.Controllers
 
         public List<PickedItem> GetItemsFromCartItems(List<CartItem> cartItems)
         {
-            if(cartItems.Count() <= 0)
+            if(!cartItems.Any())
                 throw new Exception("No items in cart");
 
             List<PickedItem> pickedItems = new List<PickedItem>();
