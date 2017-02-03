@@ -75,5 +75,3 @@ C:\Users\August\documents\visual studio 2017\Projects\Labb1\Labb1\bin\System.Web
 C:\Users\August\documents\visual studio 2017\Projects\Labb1\Labb1\bin\System.Net.Http.Formatting.xml
 C:\Users\August\documents\visual studio 2017\Projects\Labb1\Labb1\bin\System.Web.Http.xml
 C:\Users\August\documents\visual studio 2017\Projects\Labb1\Labb1\bin\System.Web.Http.WebHost.xml
-C:\Users\August\Documents\Visual Studio 2017\Projects\Labb1\Labb1\bin\Labb1.dll.CodeAnalysisLog.xml
-C:\Users\August\Documents\Visual Studio 2017\Projects\Labb1\Labb1\bin\Labb1.dll.lastcodeanalysissucceeded

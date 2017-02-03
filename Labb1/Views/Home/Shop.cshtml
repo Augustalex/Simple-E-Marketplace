@@ -3,7 +3,7 @@
 @{
     ViewBag.Title = "Shop";
 
-    ArrayList items = new System.Collections.ArrayList();
+    IList<ShopItem> items = new List<ShopItem>();
 
     items.Add(new ShopItem("August", "Cheap mf"));
     items.Add(new ShopItem("Elvir", "A little bitch"));
@@ -29,9 +29,40 @@
 }
 
 
-@foreach (var item in items)
-{
-    <div id="shoppingList">
-        @Html.Partial("_ShopItem", item)
-    </div>
-}
+<div id="shoppingList">
+    @foreach (var item in items){
+        <div class="shopItem">
+            <img src="@Html.DisplayFor(modelItem => item.image)"/>
+            <h1>
+                @Html.DisplayFor(modelItem => item.name)
+            </h1>
+            <p>
+                @Html.DisplayFor(modelItem => item.description)
+            </p>
+            <input type="text" class="itemQuantity" size="3"/>
+            <button data-id="" class="buyItem">BUY</button>
+        </div>
+    }
+</div>
+
+<script>
+
+    $("document")
+        .asEventStream("click", ".buyItemButton")
+        .map(function (event, args) {
+            return $.post("api/cart/", event.currentTarget.data("id"));
+        }).done(function (view) {
+            cartView.innerHTML = view;
+        });
+
+    $("document").on("click",
+        "div.shopItem > button.buyItem",
+        function() {
+            
+        });
+
+    function buyItemEvent(event) {
+        var shopItemElement = $(event.target.parentElement);
+        
+    }
+</script>
